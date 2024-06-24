@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>KS Academy | Media Pembelajaran Jaringan Dasar</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    
+
+    <link href='assets/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='assets/css/main.css' rel='stylesheet' type='text/css'>
+    <link href='assets/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+    <link href='assets/css/animate-custom.css' rel='stylesheet' type='text/css'>
+    <link href='assets/css/tambah-font.css' rel='stylesheet' type='text/css'>
+    <link href='assets/css/tambah-modis.css' rel='stylesheet' type='text/css'>
+    <link href="assets/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" media="screen">
+
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
+	<script type="text/javascript" src="assets/js/jmodis.js"></script>
+    <script type="text/javascript" src="assets/fancybox/jquery.fancybox.pack.js"></script>
+    <script>
+    $(document).ready(function() {
+        //semua links dengam akhiran ekstensi gambar
+        var thumbnails = 'a[href$=".gif"],a[href$=".jpg"],a[href$=".jpeg"],a[href$=".png"],a[href$=".GIF"],a[href$=".JPG"],a[href$=".JPEG"],a[href$=".PNG"]';
+
+        //menambah class "fancybox" ke thumbnails dan dijadikan satu group "rel" untuk mengaktifkan tombol previous/next
+        jQuery(thumbnails).addClass("fancybox").attr("rel","lightbox");
+
+        //memanggil fancybox
+        jQuery('.fancybox').fancybox({
+            padding: 0,
+            //mendapatkan alt dari img untuk title fancybox
+            beforeShow : function() {
+                var alt = this.element.find('img').attr('alt');
+                this.inner.find('img').attr('alt', alt);
+                this.title = alt;
+            }
+        });
+    });
+    </script>
+</head>
+<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+
+<div id="navbar-main">
+    <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="menuIcon"><i class="fa fa-lg fa-list-ul"></i> Menu</span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+             <ul class="nav navbar-nav">
+                <li><a href="index.html"><i class="glyphicon glyphicon-home"></i>&nbsp; Home</a></li>
+                <li><a href="pembelajaran.html"><i class="glyphicon glyphicon-book"></i>&nbsp; Pembelajaran</a></li>
+                <li><a href="evaluasi-daftar.html"><i class="glyphicon glyphicon-list"></i>&nbsp; Evaluasi</a></li>
+                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-question-sign"></i>&nbsp; Bantuan<b class="caret"></b></a>			                    
+                	<ul class="dropdown-menu">
+                        <li><a href="petunjuk.html"><i class="glyphicon glyphicon-cog"></i>&nbsp; Petunjuk</a></li>
+             </ul>
+        </div>
+    </div>
+    </div>
+</div>
+
+    <!--INFO AWAL-->
+	<div id="kbwrap" class="kbwrap02">
+		<div class="row">
+          <h3 class="centered">Pengalamatan IP v6 </h3>
+            <br>
+		</div>
+	</div>
+	
+	<div class="container" id="kb02" name="kb02">
+		<br>
+		<div class="row">
+			<div class="col-md-offset-2 col-md-8">
+	<div class="panel panel-default artikel" id="tujuan">
+				<div class="panel-body"> 
+					<h3 class="page-header">Kompetensi Dasar</h3>
+                    <ul>
+                    	<li>Memahami protokol pengalamatan.</li>
+                        <li>Menyajikan penggunaan protokol pengalamatan.</li>
+                    </ul>
+					<h3 class="page-header">Tujuan</h3> 
+    				<p>Setelah kegiatan pembelajaran ini peserta didik diharapkan mampu:</p>
+					<ul>
+                        <li>Menjelaskan pengertian protokol pengalamatan ip v6.</li>
+                        <li>Menjelaskan prinsip cara kerja dari protokol pengalamatan ip v6.</li>
+                        <li>Menjelaskan fungsi dan kegunaan protokol pengalamatan ip v6</li>
+					</ul>
+                    <hr>
+                    <br><p class="gambar-tengah"><a class="btn btn-warning btn-sm smoothScroll" onclick="toggle('uraianMateri');" href="#uraianMateri">Lanjut ke Materi &raquo;</a></p>
+				</div>
+			</div>
+			
+			<div class="panel panel-default artikel" id="uraianMateri" style="display:none;">
+				<div class="panel-body">
+					<h3 class="page-header">Materi</h3>
+                    
+                    <div class="kb-row-container">
+                    <div class="kb-row" id="ApaituPengalamatanIPV6">
+    					<a href="#uraianMateri" class="kb-row-handle">Apa yang dimaksud dengan pengalamatan IP v6 ?</a>
+    					<div class="kb-row-content">  
+						
+                            <p><strong>Pengalamatan IP V6</strong> adalah sebuah jenis
+pengalamatan jaringan yang digunakan di
+dl dalam protokol jaringan TCP/IP yang 
+menggunakan protokol IP versi 6.</p>
+							<p>IPv6  ini  merupakan perkembangan  dari  IPv4  yang  dapat  menyediakan  lebih 
+banyak  IP  address  karena  IPv6  ini  panjangnya  adalah 128  bit. tidak  seperti  IPv4  yang 
+panjangnya hanya 32 bit saja. selain itu, masih banyak kelebihan lain dari IPv6 ini bila 
+dibandingkan dengan IPv4.</p>
+							<p>Panjang totalnya adalah128‐bit, dan secara teoritis dapat mengalamati hingga 2 pangkat 128 =3,4 x 10 pangkat 38 host komputer diseluruh dunia.</p>
+                         
+                      <figure class="gambar-tengah img-responsive">
+    							<a href="assets/img/materi2/ip6.png"><img src="assets/img/materi2/ip6.png" class="img-responsive tengah" alt="Ilustrasi IP V6"></a>
+                                <figcaption>Gambar 1. &nbsp;&nbsp;Ilustrasi IP V6</figcaption>
+    						</figure>
+                            <p><strong>Keunggulan IP v6</strong></p>
+                        <p>1.  Jumlah IP Address yang sangat banyak.
+<br>Seperti yang telah diketahui, pada IPv4 panjang satu  alamat IP-nya adalah 32 bit yang berarti dapat menyediakan alamat IP sebanyak  4.294.967.296. mungki jika dilihat sepintas jumlah tersebut sudah banyak,  tetapi karena implementasi tertentu dalam penggunaanya pada  kenyataanya  jumlah  IP  tersebut  masih  kurang  jika digunakan untuk membuat jaringan pada seluruh  dunia ini. Berbeda dengan IPv6, IPv6  pada satu  alamat IP-nya panjangnya 128 bit atau dengan kata lain dapat menyediakan  alamat IP sebanyak  3.4  x  10
+38. Jumlah tersebut sangatlah besar sehingga dapat mengatasi masalah kekurangan IP pada beberapa tahun mendatang.</p>
+						<p>2.  Autoconfiguration.
+<br>IPv6 dirancang agar penggunanya tidak dipusingkan dengan konfigurasi Ip address. Komputer pengguna yang  terhubung dengan jaringan IPv6 akan mendapatkan IP 
+address langsung dari router, sehingga nantinya DHCP server tidak diperlukan lagi. Autoconfiguration  nantinya sangat  berguna bagi  peralatan  mobile internet karena 
+pengguna tidak direpotkan dengan konfigurasi sewaktu  berpindah tempat dan jaringan. </p>
+						<p>3.  Security.
+<br>IPv6 telah dilengkapi dengan protokol IPSec,sehingga  semua aplikasi telah memiliki security  yang  optimal  bagi berbagai aplikasi yang membutuhkan keamanan, misalnya  saja transaksi e-banking. Disamping itu,IPSec dalam Ipv6 
+merupakan protokol keamanan yang paling andal saat ini. Dimana ia menggunakan teknik enkripsi  yang rumit sehingga sulit ditebak oleh hacker yang akan membaca data yang dilewatkan.</p>
+						<p>4.  Quality  of  Service.
+<br>IPv6 memiliki protokol QoS yang terintegrasi dengan  baik, sehingga semua aplikasi yang berjalan diatas Ipv6 memiliki jaminan QoS, terutama bagi aplikasi yang sensitive terhadap delay seperti VoIP dan streaming video.
+                        </p>
+    					</div>	
+                    </div>
+						
+                        <div class="kb-row" id="Jenisjenisalamatipv6">
+    					<a href="#ApaituPengalamatanIPV6" class="kb-row-handle">Jenis-jenis pengalamtan IP v6</a>
+    					<div class="kb-row-content">
+                            <p>Seperti yang telah diketahui, pada IPv4 terdapat suatu pengalamatan IP yang dibagi menjadi lima kelas yaitu kelas  a,  b,  c,  d,  dan e. dimana diantara kelima kelas tersebut hanya kelas a,b,dan c yang bisa dugunakan karena kelas D digunakan untuk keperluan multicasting  dan  kelas  E untuk keperluan eksperimental. Berbeda dengan IPv6 pada  IPv6 tidak dikenal system pengkelasan seperti pada  IPv4 melainkan  pada  IPv6  hanya  menyediakan  tiga  jenis  pengalamatan  yaitu  Unicast,Anycast dan Multicast</p>
+						<p><strong>1. Unicast</strong> Pengalamatan unicast mirip dengan IPv4 yaitu dengan  sekumpulan alamat dengan sejumlah bit kontinyu yang sama sesuai dengan alamat subnet-nya dan Class-less Interdomain Routing (CIDR). Ada banyak jenis pengalamatan unicast pada IPv6 sesuai dengan tipenya seperti :
+<br> - Alamat Link Local : alamat yang digunakan di dalam satu link yaitu jaringan local yang saling tersambung dalam satu level 
+<br> - Alamat Site Local : setara dengan alamat privat,yang dipakai terbatas dalam satu site sehingga terbatas penggunaanya hanya didalam satu site sehingga tidak dapat digunakan untuk mengirimkan alamat diluar site ini 
+<br> - Alamat Global : alamat yang dipakai misalnya untuk ISP (Internet  Service Provider) </p>
+                       <p><strong>2. Anycast</strong> Pengalamatan anycast digunakan untuk mengirimkan packet ke salah satu anggota dari anycast yang terdekat. Jadi sebuah alamat anycast digunakan oleh beberapa interface dan setiap packet anycast akan terkirim ke interface anggota yang terdekat. Model pengalamatan pada anycast hampir sama dengan model unicast. Jadi secara sintaksis alamat anycast sama saja dengan unicast, hanya saja sebuah alamat anycast digunakan oleh lebih dari 1 host. Syarat dari pengalamatan anycast : 
+<br>a. Sebuah alamat anycast tidak boleh digunakan sebagai alamat sumber dari sebuah packet IPv6. 
+<br>b. Sebuah alamat anycast tidak boleh digunakan sebagai alamat interface pada router.</p>  
+                      <p><strong>3. Multicast</strong> Alamat multicast IPv6 digunakan  sebagai  identitas  sebuah group node. Jika packet dikirim ke alamat multicast, maka packet tersebut akan diterima oleh semua node anggota dari group tersebut. Sebuah node dapat menjadi anggota banyak group multicast.</p>
+                      </div>
+                      </div>
+                      <div class="kb-row" id="PenulisanIPv6">
+    					<a href="#PenulisanIpv6" class="kb-row-handle">Penulisan IP v6</a>
+    					<div class="kb-row-content">
+                            <p>Tidak seperti IPv4, IPv4 dituliskan dengan bilangan hexadecimal yaitu 0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f. pada IPv6 ini terdapat delapan blok dimana tiap blok tersebut terdapat empat  digit bilangan hexadecimal. Berbeda dengan IPv4 hanya terdiri dari empat blok saja. selain itu, untuk memisahkan tiap bloknya pada IPv6 digunakan titik dua,tidak titik seperti pada IPv4. Berikut merupakan contoh penulisan IPv6
+<br>
+<br>2001:0db8:0000:0000:5a55:0302:fef6:0012
+<br>
+<br>Karena pada IPv6 alamat yang digunakan panjang dalam penulisanya, maka telah dibuat Ketentuan tertentu untuk penyederhanaan untuk alamat IPv6, yaitu :
+<br>- Angka 0 didepan bisa dihilangkan
+<br>- 0000 yang berurutan bisa dihilangkan dan diganti dengan titik dua. Dengan begitu penulisan alamat IPv6 
+<br>
+<br>2001:0db8:0000:0000:5a55:0302:fef6:0012  diatas menjadi<br>
+<br>2001:db8::5a55:302:fef6:12</p>
+                                                     				
+	   					</div>
+    				</div>
+   
+    			
+    			    			
+    				</div><!-- kb-row-container-->
+    				
+            		<br><hr><br><p class="gambar-tengah"><a class="btn btn-warning btn-sm smoothScroll" onclick="toggle('rangkuman');" href="#rangkuman">Lanjut ke Rangkuman &raquo;</a></p>
+    			</div>
+    		</div>
+            
+    		<div class="panel panel-default artikel" id="rangkuman" style="display:none;">
+				<div class="panel-body">  
+					<h3 class="page-header">Rangkuman</h3>
+					<p>Internet digunakan untuk menunjukan jaringan yang menggunakan internet protocol (IP) tapi dengan semakin berkembangnya jaringan, istilah ini sekarang sudah berupa istilah generik yang digunakan untuk semua kelas jaringan. Internet digunakan untuk menunjuk pada komunitas jaringan komputer worldwide yang saling dihubungkan dengan protokol TCP/IP.</p>
+                    <p>Perkembangan protokol TCP/IP menggunakan standar protokol terbuka sehingga tersedia  secara luas. Semua orang bisa mengembangkan perangkat lunak untuk dapat berkomunikasi menggunakan protokol ini. Hal  ini membuat pemakaian TCP/IP meluas dengan sangat cepat, terutama dari sisi pengadopsian  oleh  berbagai  sistem operasi dan aplikasi  jaringan.TCP/IP memiliki fasilitas routing dan jenis-jenis layanan lainnya yang memungkinkan
+diterapkan pada internetwork.
+                    </p>
+                    
+                     <br><hr><br><p class="gambar-tengah"><a class="btn btn-primary btn-sm smoothScroll" href="evaluasi-2.html">Lanjut ke Evaluasi &raquo;</a></p>
+    			</div>
+    		</div>
+			</div>
+			<a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> <br> ke atas</a>
+		</div><!-- row -->
+	</div><!-- kb02 --> 	
+  		
+	<div id="footerwrap">
+		<div class="container">
+			<p>SESUAI DENGAN KURIKULUM 2013</p>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/retina.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="assets/js/smoothscroll.js"></script>
+	<script type="text/javascript" src="assets/js/jquery-func.js"></script>
+  </body>
+</html>

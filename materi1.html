@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>KS Academy | Media Pembelajaran Jaringan Dasar</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+   
+    <link href='assets/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='assets/css/main.css' rel='stylesheet' type='text/css'>
+    <link href='assets/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+    <link href='assets/css/animate-custom.css' rel='stylesheet' type='text/css'>
+    <link href='assets/css/tambah-font.css' rel='stylesheet' type='text/css'>
+    <link href='assets/css/tambah-modis.css' rel='stylesheet' type='text/css'>
+    <link href="assets/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" media="screen">
+
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
+	<script type="text/javascript" src="assets/js/jmodis.js"></script>
+    <script type="text/javascript" src="assets/fancybox/jquery.fancybox.pack.js"></script>
+    <script>
+    $(document).ready(function() {
+        //semua links dengam akhiran ekstensi gambar
+        var thumbnails = 'a[href$=".gif"],a[href$=".jpg"],a[href$=".jpeg"],a[href$=".png"],a[href$=".GIF"],a[href$=".JPG"],a[href$=".JPEG"],a[href$=".PNG"]';
+
+        //menambah class "fancybox" ke thumbnails dan dijadikan satu group "rel" untuk mengaktifkan tombol previous/next
+        jQuery(thumbnails).addClass("fancybox").attr("rel","lightbox");
+
+        //memanggil fancybox
+        jQuery('.fancybox').fancybox({
+            padding: 0,
+            //mendapatkan alt dari img untuk title fancybox
+            beforeShow : function() {
+                var alt = this.element.find('img').attr('alt');
+                this.inner.find('img').attr('alt', alt);
+                this.title = alt;
+            }
+        });
+    });
+    </script>
+    <style>
+        .navbar-default {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-color: transparent;
+        }
+        .navbar-default .navbar-brand {
+            color: #fff;
+        }
+        .navbar-default .navbar-nav > li > a {
+            color: #fff;
+        }
+        .navbar-brand img {
+            filter: drop-shadow(2px 2px 4px #000);
+        }
+        #footerwrapAwal {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            top: 200px;
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+
+<div id="navbar-main">
+    <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="menuIcon"><i class="fa fa-lg fa-list-ul"></i> Menu</span>
+            </button>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+                <li><a href="index.html"><i class="glyphicon glyphicon-home"></i>&nbsp; Home</a></li>
+                <li><a href="pembelajaran.html"><i class="glyphicon glyphicon-book"></i>&nbsp; Pembelajaran</a></li>
+                <li><a href="evaluasi-daftar.html"><i class="glyphicon glyphicon-list"></i>&nbsp; Evaluasi</a></li>
+                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-question-sign"></i>&nbsp; Bantuan<b class="caret"></b></a>			                    
+                	<ul class="dropdown-menu">
+                        <li><a href="petunjuk.html"><i class="glyphicon glyphicon-cog"></i>&nbsp; Petunjuk</a></li>
+                    </ul>
+        </div>
+    </div>
+    </div>
+</div>
+
+    <!--INFO AWAL-->
+	<div id="kbwrap" class="kbwrap01">
+		<div class="row">	
+			<h3 class="centered">Pengalamatan IP v4</h3>
+			<br>
+		</div>
+	</div>
+	
+	<div class="container" id="kb01" name="kb01">
+		<br>
+		<div class="row">
+			<div class="col-md-offset-2 col-md-8">
+			<div class="panel panel-default artikel" id="tujuan">
+				<div class="panel-body"> 
+                	<h3 class="page-header">Kompetensi Dasar</h3>
+                    <ul>
+                    	<li>Memahami protokol pengalamatan.</li>
+                        <li>Menyajikan penggunaan protokol pengalamatan.</li>
+                    </ul>
+					<h3 class="page-header">Tujuan</h3> 
+    				<p>Setelah kegiatan pembelajaran ini peserta didik diharapkan mampu:</p>
+					<ul>
+                        <li>Menjelaskan pengertian dari protokol pengalamatan ip v4.</li>
+                        <li>Menjelaskan prinsip cara kerja dari protokol pengalamatan ip v4.</li>
+                        <li>Menjelaskan fungsi dan kegunaan protokol pengalamatan ip v4.</li>
+                    </ul>
+                    <hr>
+                    <br><p class="gambar-tengah"><a class="btn btn-warning btn-sm smoothScroll" onclick="toggle('uraianMateri');" href="#uraianMateri">Lanjut ke Materi &raquo;</a></p>
+				</div>
+			</div>
+			
+			<div class="panel panel-default artikel" id="uraianMateri" style="display:none;">
+				<div class="panel-body">
+					<h3 class="page-header">Materi</h3>
+                    
+                    <div class="kb-row-container">
+                    <div class="kb-row" id="Jenis-jenisPengalamatanIPv4">
+    					<a href="#uraianMateri" class="kb-row-handle">Apa yang dimaksud dengan pengalamatan IP v4 ?</a>
+    					<div class="kb-row-content">
+<figure class="gambar-kanan img-responsive">
+ <a href="assets/img/materi1/iconip4.png">
+ <img src="assets/img/materi1/iconip4.png" width="300px" class="img-responsive tengah" alt="IP V4" title="IP V4">
+ </a>
+ <figcaption>Gambar 1. &nbsp;&nbsp; IP V4</figcaption>
+ </figure>
+    						<p><strong>Pengalamatan IP versi 4 (IPV4)</strong> adalah pengalamatan yang digunakan dalam protokol jaringan TCP/IP yang menggunakan protokol IP versi 4, dengan panjang 32 bit.  dan apabila dihitung secara matematis , akan dapat memberikan alamat hingga 4 miliar host komputer di seluruh dunia.  perhitungannya didapatkan dari 256 (didapatkan dari 8 bit) dipangkat 4 (terdapat 4 oktet). sehingga nilai maksimal dari alamt IP versi 4 tersebut adalah 255.255.255.255 dimana nilai dihitung dari nol sehingga nilai nilai host yang dapat ditampung adalah 256x256x256x256 = 4.294.967.296 host, bila host yang ada di seluruh dunia melebihi kuota tersebut maka dibuatlah IP versi 6 atau IPv6.</p>
+                            <p>Anda harus anda tahu bahwa ip address merupakan pengalamatan dengan panjang 32 bit yang terbagi dalam 2 bagian yaitu :
+<br>1.Identitas Jaringan (network number)
+<br>2.Identitas host (host number)
+<br>Format pengalamatan yang digunakan dikenal dengan istilah dotted-decimal notationyang masing-masing bagian terdiri dari 8 bit.
+</p>
+
+<figure class="gambar-kanan img-responsive">
+ <a href="assets/img/materi1/IP V4.png">
+ <img src="assets/img/materi1/IP V4.png" width="300px" class="img-responsive tengah" alt="Protokol IP V4" title="Protokol IP V4">
+ </a>
+ <figcaption>Gambar 2. &nbsp;&nbsp; Protokol IP V4</figcaption>
+ </figure>
+                            <p>Alamat IP yang dimiliki oleh sebuah host dapat dibagi dengan menggunakan subnet mask jaringan ke dalam dua buah bagian, yaitu : <strong>Network Identifier/NetID</strong> atau Network Address (alamat jaringan) yang digunakan khusus untuk mengidentifikasikan alamat jaringan di mana host berada.</p>
+                            <p><strong>Host Identifier/HostID</strong> atau Host address (alamat host) yang digunakan khusus untuk mengidentifikasikan alamat host (dapat berupa workstation, server atau sistem lainnya yang berbasis teknologi TCP/IP) di dalam jaringan.</p>
+
+    					</div>
+    				</div>
+    				
+    				<div class="kb-row" id="Jenis-jenis alamat">
+    					<a href="#Jenis-jenisPengalamatanIPv4" class="kb-row-handle">Jenis-jenis pengalamatan IP v4</a>
+    					<div class="kb-row-content">
+                            <p><strong>1.Alamat Unicast</strong>, merupakan alamat IPv4 yang ditentukan untuk sebuah antarmuka jaringan yang dihubungkan ke sebuah Internetwork IP. Alamat unicast digunakan dalam komunikasi one-to-one.</p>
+                            <p><strong>2.Alamat Broadcast</strong>, merupakan alamat IPv4 yang didesain agar diproses oleh setiap node IP dalam segmen jaringan yang sama. Alamat broadcast digunakan dalam komunikasi one-to-everyone.</p>
+                            <p><strong>3.Alamat Multicast</strong>, merupakan alamat IPv4 yang didesain agar diproses oleh satu atau beberapa node dalam segmen jaringan yang sama atau berbeda. Alamat multicast digunakan dalam komunikasi one-to-many.</p>
+                                                  
+    					</div>
+    				</div>
+                        
+                    <div class="kb-row" id="Kelas-kelas alamat">
+    				<a href="#Kelas" class="kb-row-handle">Kelas-kelas alamat </a>
+    					<div class="kb-row-content">
+                            <figure class="gambar-tengah img-responsive">
+                                <a href="assets/img/materi1/alamat.png"><img src="assets/img/materi1/alamat.png" class="img-responsive tengah" width="300px" alt="Kelas-kelas alamat" title="Kelas-kelas alamat"></a>
+                                <figcaption>Gambar 3. &nbsp;&nbsp; Kelas-kelas alamat</figcaption>
+                            </figure>
+                         <p><strong>Kelas A</strong></p>
+                         <p>Alamat kelas A diberikan untuk jaringan skala besar. Nomor urut bit tertinggi di dalam alamat IP kelas A selalu diset dengan nilai 0 (nol). Tujuh bit berikutnya—untuk melengkapi oktet pertama—akan membuat sebuah network identifier. 24 bit sisanya (atau tiga oktet terakhir) merepresentasikan host identifier. Ini mengizinkan kelas A memiliki hingga 126 jaringan, dan 16,777,214 host tiap jaringannya. Alamat dengan oktet awal 127 tidak diizinkan, karena digunakan untuk mekanisme Interprocess Communication (IPC) di dalam mesin yang bersangkutan.</p>
+                        <p><strong>Kelas B</strong></p>
+						<p>Alamat-alamat kelas B dikhususkan untuk jaringan skala menengah hingga skala besar. Dua bit pertama di dalam oktet pertama alamat IP kelas B selalu diset ke bilangan biner 10. 14 bit berikutnya (untuk melengkapi dua oktet pertama), akan membuat sebuah network identifier. 16 bit sisanya (dua oktet terakhir) merepresentasikan host identifier. Kelas B dapat memiliki 16,384 network, dan 65,534 host untuk setiap network-nya.</p>
+                        <p><strong>Kelas C</strong></p>
+                        <p>Alamat IP kelas C digunakan untuk jaringan berskala kecil. Tiga bit pertama di dalam oktet pertama alamat kelas C selalu diset ke nilai biner 110. 21 bit selanjutnya (untuk melengkapi tiga oktet pertama) akan membentuk sebuah network identifier. 8 bit sisanya (sebagai oktet terakhir) akan merepresentasikan host identifier. Ini memungkinkan pembuatan total 2,097,152 buah network, dan 254 host untuk setiap network-nya.</p>
+                        <p><strong>Kelas D</strong></p>
+                        <p>Alamat IP kelas D disediakan hanya untuk alamat-alamat IP multicast, namun berbeda dengan tiga kelas di atas. Empat bit pertama di dalam IP kelas D selalu diset ke bilangan biner 1110. 28 bit sisanya digunakan sebagai alamat yang dapat digunakan untuk mengenali host. Untuk lebih jelas mengenal alamat ini, lihat pada bagian Alamat Multicast IPv4.</p>
+                        <p><strong>Kelas E</strong></p>
+                        <p>Alamat IP kelas E disediakan sebagai alamat yang bersifat "eksperimental" atau percobaan dan dicadangkan untuk digunakan pada masa depan. Empat bit pertama selalu diset kepada bilangan biner 1111. 28 bit sisanya digunakan sebagai alamat yang dapat digunakan untuk mengenali host.</p>
+                        </div>
+    				</div>    				
+    				
+    				<div class="kb-row">
+    					<a href="#KonfersiBilangan" class="kb-row-handle">Konfersi Bilangan</a>
+    					<div class="kb-row-content">
+                        <p><strong>Mengkonversi bilangan biner ke desimal</strong></p>
+                            <figure class="gambar-kiri img-responsive">
+                                <a href="assets/img/materi1/biner ke desimal.png"><img src="assets/img/materi1/biner ke desimal.png" width="300px" class="img-responsive tengah" alt="Konversi Biner ke Desimal" title="Konversi Biner ke Desimal"></a>
+                                <figcaption>Gambar 4. &nbsp;&nbsp; Konversi Biner ke Desimal</figcaption>
+    				        </figure>
+                            <p>Misal bilangan biner 11110101 untuk dikonversi ke bilangan decimal, dengan cara:
+<br>1   =   128
+<br>1   =   64
+<br>1   =   32
+<br>1   =   16
+<br>0   =   0
+<br>1   =   4
+<br>0   =   0
+<br>1   =   1
+<br>
+<br>Caranya dengan menjumlahkan, 128+64+32+16+0+4+0+1=245</p>
+<br>
+<br>
+
+                            <p><strong>Mengkonversi bilangan desimal ke biner</strong></p>
+                            
+                            <figure class="gambar-kiri img-responsive">
+                                <a href="assets/img/materi1/desimal ke biner.jpg"><img src="assets/img/materi1/desimal ke biner.png" width="300px" class="img-responsive tengah" alt="Konversi Biner ke Desimal" title="Konversi Biner ke Desimal"></a>
+                                <figcaption>Gambar 5. &nbsp;&nbsp; Konversi Desimal ke Biner</figcaption>
+    				        </figure>
+                            <p>Misalnya, merubah bilangan desimal 172
+<br>172 bisa dikurang 128 ? ya,simpan 1 , sisa 44
+<br>44 bisa dikurang 64 ? tidak,simpan 0
+<br>44 bisa dikurang 32 ? ya,simpan 1, sisa 12
+<br>12 bisa dikurang 16 ? tidak,simpan 0
+<br>12 bisa dikurang 8 ? ya,simpan 1, sisa 4
+<br>4 bisa dikurang 4 ? ya,simpan 1, sisa 0
+<br>0 bisa dikurang 2 ? tidak, simpan 0
+<br>0 bisa dikurang 1 ? tidak, simpan 0
+<br>
+<br>Baca dari atas ke bawah 10101100</p>
+                           	</div>
+    				</div>
+                        
+    				</div><!-- kb-row-container-->
+    				
+                    <br><hr><br><p class="gambar-tengah"><a class="btn btn-warning btn-sm smoothScroll" onclick="toggle('rangkuman');" href="#rangkuman">Lanjut ke Rangkuman &raquo;</a></p>
+    			</div>
+    		</div>
+
+    		<div class="panel panel-default artikel" id="rangkuman" style="display:none;">
+				<div class="panel-body">  
+					<h3 class="page-header">Rangkuman</h3>
+					<p><strong>Pengalamatan IP versi 4(IPV4)</strong>adalah pengalamatan yang digunakan dalam protokol jaringan TCP/IP yang menggunakan protokol IP versi 4, dengan panjang 32 bit .dan apabila dihitung secara matematis , akan dapat memberikan alamat hingga 4 miliar host komputer (4.294.296)di seluruh dunia.</p>
+                    <p>Alamat IP yang dimiliki oleh sebuah host dapat dibagi dengan menggunakan subnet mask jaringan ke dalam dua buah bagian, yaitu:
+ <strong>Network Identifier/NetID </strong>atau Network Address (alamat jaringan) yang digunakan khusus untuk mengidentifikasikan alamat jaringan di mana host berada.</p>               
+                    <p><strong>Host Identifier/HostID</strong> atau Host address (alamat host) yang digunakan khusus untuk mengidentifikasikan alamat host (dapat berupa workstation, server atau sistem lainnya yang berbasis teknologi TCP/IP) di dalam jaringan.</p>
+                    
+                    <br><hr><br><p class="gambar-tengah"><a class="btn btn-primary btn-sm smoothScroll" href="evaluasi-1.html">Lanjut ke Evaluasi &raquo;</a></p>
+    			</div>
+    		</div>	
+			</div><!-- col-md-offset-2 col-md-8 -->
+			<a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> <br> ke atas</a>
+		</div><!-- row -->
+	</div><!-- kb02 --> 	
+  		
+	<div id="footerwrap">
+		<div class="container">
+			<p>SESUAI DENGAN KURIKULUM 2013</p>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/retina.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="assets/js/smoothscroll.js"></script>
+	<script type="text/javascript" src="assets/js/jquery-func.js"></script>
+  </body>
+</html>

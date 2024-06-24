@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>KS Academy | Media Pembelajaran Jaringan Dasar</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+
+    <link href='assets/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='assets/css/main.css' rel='stylesheet' type='text/css'>
+    <link href='assets/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+    <link href='assets/css/animate-custom.css' rel='stylesheet' type='text/css'>
+    <link href='assets/css/tambah-font.css' rel='stylesheet' type='text/css'>
+    <link href='assets/css/tambah-modis.css' rel='stylesheet' type='text/css'>
+    <link href="assets/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" media="screen">
+
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
+	<script type="text/javascript" src="assets/js/jmodis.js"></script>
+    <script type="text/javascript" src="assets/fancybox/jquery.fancybox.pack.js"></script>
+    <script>
+    $(document).ready(function() {
+        //semua links dengam akhiran ekstensi gambar
+        var thumbnails = 'a[href$=".gif"],a[href$=".jpg"],a[href$=".jpeg"],a[href$=".png"],a[href$=".GIF"],a[href$=".JPG"],a[href$=".JPEG"],a[href$=".PNG"]';
+
+        //menambah class "fancybox" ke thumbnails dan dijadikan satu group "rel" untuk mengaktifkan tombol previous/next
+        jQuery(thumbnails).addClass("fancybox").attr("rel","lightbox");
+
+        //memanggil fancybox
+        jQuery('.fancybox').fancybox({
+            padding: 0,
+            //mendapatkan alt dari img untuk title fancybox
+            beforeShow : function() {
+                var alt = this.element.find('img').attr('alt');
+                this.inner.find('img').attr('alt', alt);
+                this.title = alt;
+            }
+        });
+    });
+    </script>
+</head>
+<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+
+<div id="navbar-main">
+    <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="menuIcon"><i class="fa fa-lg fa-list-ul"></i> Menu</span>
+            </button>
+        <div class="navbar-collapse collapse">
+           <ul class="nav navbar-nav">
+                <li><a href="index.html"><i class="glyphicon glyphicon-home"></i>&nbsp; Home</a></li>
+                <li><a href="pembelajaran.html"><i class="glyphicon glyphicon-book"></i>&nbsp; Pembelajaran</a></li>
+                <li><a href="evaluasi-daftar.html"><i class="glyphicon glyphicon-list"></i>&nbsp; Latihan</a></li>
+                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-question-sign"></i>&nbsp; Bantuan<b class="caret"></b></a>			                    
+                	<ul class="dropdown-menu">
+                        <li><a href="petunjuk.html"><i class="glyphicon glyphicon-cog"></i>&nbsp; Petunjuk</a></li>
+
+        </div>
+    </div>
+    </div>
+</div>
+
+    <!--INFO AWAL-->
+	<div id="kbwrap" class="kbwrap04">
+		<div class="row"></a>
+		  <h3 class="centered">Network Address Translation (NAT)</h3>
+			<hr>
+		</div>
+	</div>
+	
+	<div class="container" id="kb04" name="kb04">
+		<br>
+		<div class="row">
+			<div class="col-md-offset-2 col-md-8">
+			<div class="panel panel-default artikel" id="tujuan">
+				<div class="panel-body"> 
+					<h3 class="page-header">Kompetensi Dasar</h3>
+                    <ul>
+                    	<li>Memahami protokol pengalamatan.</li>
+                        <li>Menyajikan penggunaan protokol pengalamatan.</li>
+                    </ul>
+					<h3 class="page-header">Tujuan</h3> 
+    				<p>Setelah kegiatan pembelajaran ini peserta didik diharapkan mampu:</p>
+					<ul>
+                        <li>Memahami Network Adress Translation (NAT)</li>
+                        <li>Menjelaskan Network Adress Translation (NAT)</li>
+                        
+					</ul>
+                    
+                    <hr><br><p class="gambar-tengah"><a class="btn btn-warning btn-sm smoothScroll" onclick="toggle('uraianMateri');" href="#uraianMateri">Lanjut ke Materi &raquo;</a></p>
+				</div>
+			</div>
+			
+			<div class="panel panel-default artikel" id="uraianMateri" style="display:none;">
+				<div class="panel-body">
+					<h3 class="page-header">Materi</h3>
+                    
+				    
+                    <div class="kb-row-container">
+                    <div class="kb-row" id="ApaituNetworkAdressTranslationNAT)">
+    					<a href="#uraianMateri" class="kb-row-handle">Apa yang dimaksud dengan Network Adress Translation (NAT)</a>
+    					<div class="kb-row-content">
+							<figure class="gambar-kanan img-responsive">
+ <a href="assets/img/materi4/NAT.png">
+ <img src="assets/img/materi4/NAT.png" width="300px" class="img-responsive tengah" alt="Ilustrasi NAT" title="Ilustrasi NAT">
+ </a>
+ <figcaption>Gambar 1. &nbsp;&nbsp; Ilustrasi NAT </figcaption>
+ </figure>
+							<p><strong>NAT (Network Address Translation)</strong> adalah suatu metode untuk menghubungkan lebih dari satu komputer ke jaringan internet dengan menggunakan satu alamat IP. Banyaknya penggunaan metode ini disebabkan karena ketersediaan alamat IP yang terbatas, kebutuhan akan keamanan (security),dan kemudahan serta fleksibilitas dalam administrasi jaringan.
+<br>Jaringan yang didisain untuk menyederhanakan IP address dan berperan juga untuk melindungi jaringan. NAT merupakan teknologi yang memungkinkan jaringan IP Private,software yang melakukan NAT yang memungkinkan seluruh koneksi rumahan berbagi koneksi internet melalui satu IP address. AT berlaku sebagai penerjemah antara dua jaringan. Dalam beberapa kasus pada jaringan rumahan, posisi NAT diantara jaringan internet dan jaringan lokal Anda. Internet sebagai sisi “<strong>Public</strong>” dan jaringan lokal sebagai sisi “<strong>Private</strong>”. Ketika komputer pada jaringan private menginginkan data dari jaringan public (internet), maka perangkat NAT membuka sedikit saluran antara komputer dan komputer tujuan. Ketika komputer pada jaringan internet membalikkan hasil dari permintaan, yang dilewati melalui perangkat NAT kepada komputer peminta, sehingga paket tersebut dapat diteruskan melewati jaringan public dapat membagi koneksi akses internet.</p>
+                            <p><strong>Alasan menggunakan NAT dalam jaringan</strong> :
+<br>1. Menghemat IP legal yang diberikan oleh ISP (Internet service provider)
+<br>2. Mengurangi terjadinya duplikasi IP address pada jaringan
+<br>3. Menghindari proses pengalamatan kembali pada saat jaringan berubah
+<br>4. Meningkatkan fleksibilitas untuk koneksi ke internet</p>
+                            </div>
+    				</div>
+    				
+    				<div class="kb-row">
+    					<a href="#ApaituNetworkAdressTranslationNAT" class="kb-row-handle">Tipe Network Adress Translation (NAT)</a>
+    					<div class="kb-row-content">
+                            <p><strong>Dua tipe NAT</strong> adalah <strong>Static</strong> dan <strong>Dinamik</strong> yang keduanya dapat digunakan secara terpisah maupun bersamaan.
+<br><br><strong>1. Statik</strong>, Translasi Static terjadi ketika sebuah alamat lokal (inside) di petakan ke sebuah alamat global/internet (outside). Alamat lokal dan global dipetakan satu lawan satu secara Statik.
+<br><strong>2. Dinamik NAT dengan Pool (kelompok)</strong>, Translasi Dinamik terjadi ketika router NAT diset untuk memahami alamat lokal yang harus ditranslasikan, dan kelompok (pool) alamat global yang akan digunakan untuk terhubung ke internet. Proses NAT Dinamik ini dapat memetakan bebarapa kelompok alamat lokal ke beberapa kelompok alamat global.
+</p>
+                            
+                           </div>
+    				</div>
+                    
+                    <div class="kb-row">
+    					<a href="#ApaituNetworkAdressTranslationNAT" class="kb-row-handle">Jenis - jenis (NAT)</a>
+    					<div class="kb-row-content">
+                     <p>Ada tiga macam jenis dasar Network Address Translation (NAT):
+                     <br>
+                     <br><strong>1. Static NAT</strong>
+                     <br>Network Address Translation (NAT) menterjemahkan sejumlah IP address tidak terdaftar menjadi sejumlah IP address yang terdaftar sehingga setiap client dipetakkan kepada IP address terdaftar yang dengan jumlah yang sama.</p>
+ 
+ <figure class="gambar-kanan img-responsive">
+ <a href="assets/img/materi4/Static NAT.png">
+ <img src="assets/img/materi4/Static NAT.png" width="300px" class="img-responsive tengah" alt="Static NAT" title="Static NAT">
+ </a>
+ <figcaption>Gambar 2. &nbsp;&nbsp; Static NAT </figcaption>
+ </figure>
+ 					<p>NAT Static Jenis NAT ini merupakan pemborosan IP address terdaftar, karena setiap IP address yang tidak terdaftar (un-registered IP) dipetakan kepada satu IP address terdaftar. Static NAT ini juga tidak seaman jenis NAT lainnya, karena setiap komputer secara permanen diasosiasikan kepada address terdaftar tertentu, sehingga memberikan kesempatan kepada para penyusup dari Internet untuk menuju langsung kepada komputer tertentu pada jaringan private anda menggunakan address terdaftar tersebut.</p>
+         			<p><strong>2. Dynamic NAT</strong>
+                    <br>Dynamic Network Address Translation dimaksudkan untuk suatu keadaan dimana anda mempunyai IP address terdaftar yang lebih sedikit dari jumlah IP address <strong>un-registered</strong>. Dynamic NAT menterjemahkan setiap komputer dengan IP tak terdaftar kepada salah satu IP address terdaftar untuk connect ke internet. Hal ini agak menyulitkan para penyusup untuk menembus komputer didalam jaringan anda karena IP address terdaftar yang diasosiasikan ke komputer selalu berubah secara dinamis, tidak seperti pada NAT statis yang dipetakan sama. Kekurangan utama dari dynamis NAT ini adalah bahwa jika jumlah IP address terdaftar sudah terpakai semuanya, maka untuk komputer yang berusaha connect ke Internet tidak lagi bisa karena IP address terdaftar sudah terpakai semuanya.</p>            
+ <figure class="gambar-kanan img-responsive">
+ <a href="assets/img/materi4/Dinamic NAT.png">
+ <img src="assets/img/materi4/Dinamic NAT.png" width="300px" class="img-responsive tengah" alt="Dinamic NAT" title="Dinamic NAT">
+ </a>
+ <figcaption>Gambar 3. &nbsp;&nbsp; Dinamic NAT </figcaption>
+ </figure>
+ 					<p><strong>3. Masquerading NAT</strong>
+                    <br>Masquerading NAT ini menterjemahkan semua IP address tak terdaftar pada jaringan anda dipetakan kepada satu IP address terdaftar. Agar banyak client bisa mengakses Internet secara bersamaan, router NAT menggunakan nomor port untuk bisa membedakan antara paket-2 yang dihasilkan oleh atau ditujukan komputer-2 yang berbeda. Solusi Masquerading ini memberikan keamanan paling bagus dari jenis-2 NAT sebelumnya, kenapa? Karena asosiasi antara client dengan IP tak terdaftar dengan kombinasi IP address terdaftar dan nomor port didalam router NAT hanya berlangsung sesaat terjadi satu kesempatan koneksi saja, setelah itu dilepas.</p>
+ <figure class="gambar-kanan img-responsive">
+ <a href="assets/img/materi4/Masquerading NAT.png">
+ <img src="assets/img/materi4/Masquerading NAT.png" width="300px" class="img-responsive tengah" alt="Masquerading NAT" title="Masquerading NAT">
+ </a>
+ <figcaption>Gambar 4. &nbsp;&nbsp; Masquerading NAT </figcaption>
+ </figure>
+                       </div>
+    				</div>
+    				</div><!-- kb-row-container-->
+    				
+                    <br><hr><br><p class="gambar-tengah"><a class="btn btn-warning btn-sm smoothScroll" onclick="toggle('rangkuman');" href="#rangkuman">Lanjut ke Rangkuman &raquo;</a></p>
+    			</div>
+    		</div>
+    		
+    		<div class="panel panel-default artikel" id="rangkuman" style="display:none;">
+				<div class="panel-body">  
+					<h3 class="page-header">Rangkuman</h3>
+					<p>NAT (Network Address Translation) adalah suatu metode untuk menghubungkan lebih dari satu komputer ke jaringan internet dengan menggunakan satu alamat IP. Banyaknya penggunaan metode ini disebabkan karena ketersediaan alamat IP yang terbatas, kebutuhan akan keamanan (security) dan kemudahan serta fleksibilitas dalam administrasi jaringan. Ada dua tipe NAT adalah Static dan Dinamik yang keduanya dapat digunakan secara terpisah maupun bersamaan
+<br><br>Alasan menggunakan NAT dalam jaringan :
+<br>1. Menghemat IP legal yang diberikan oleh ISP (Internet service provider)
+<br>2. Mengurangi terjadinya duplikasi IP address pada jaringan
+<br>3. Menghindari proses pengalamatan kembali pada saat jaringan berubah
+<br>4. Meningkatkan fleksibilitas untuk koneksi ke internet
+</p>
+                    
+                    <br><hr><br><p class="gambar-tengah"><a class="btn btn-primary btn-sm smoothScroll" href="evaluasi-4.html">Lanjut ke Evaluasi &raquo;</a></p>
+                    </div>
+    			</div>
+    		</div>
+            
+			</div><!-- col-md-offset-2 col-md-8 -->
+			<a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> <br> ke atas</a>
+		</div><!-- row -->
+	</div><!-- kb02 --> 	
+  		
+	<div id="footerwrap">
+		<div class="container">
+			<p>SESUAI DENGAN KURIKULUM 2013</p>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/retina.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="assets/js/smoothscroll.js"></script>
+	<script type="text/javascript" src="assets/js/jquery-func.js"></script>
+  </body>
+</html>

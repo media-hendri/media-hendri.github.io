@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>KS Academy | Media Pembelajaran Jaringan Dasar</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    
+    <link href='assets/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='assets/css/main.css' rel='stylesheet' type='text/css'>
+    <link href='assets/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+    <link href='assets/css/animate-custom.css' rel='stylesheet' type='text/css'>
+    <link href='assets/css/tambah-font.css' rel='stylesheet' type='text/css'>
+    <link href='assets/css/tambah-modis.css' rel='stylesheet' type='text/css'>
+    <link href="assets/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" media="screen">
+    
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
+	<script type="text/javascript" src="assets/js/jmodis.js"></script>
+    <script type="text/javascript" src="assets/fancybox/jquery.fancybox.pack.js"></script>
+    <script>
+    $(document).ready(function() {
+        //semua links dengam akhiran ekstensi gambar
+        var thumbnails = 'a[href$=".gif"],a[href$=".jpg"],a[href$=".jpeg"],a[href$=".png"],a[href$=".GIF"],a[href$=".JPG"],a[href$=".JPEG"],a[href$=".PNG"]';
+
+        //menambah class "fancybox" ke thumbnails dan dijadikan satu group "rel" untuk mengaktifkan tombol previous/next
+        jQuery(thumbnails).addClass("fancybox").attr("rel","lightbox");
+
+        //memanggil fancybox
+        jQuery('.fancybox').fancybox({
+            padding: 0,
+            //mendapatkan alt dari img untuk title fancybox
+            beforeShow : function() {
+                var alt = this.element.find('img').attr('alt');
+                this.inner.find('img').attr('alt', alt);
+                this.title = alt;
+            }
+        });
+    });
+    </script>
+</head>
+<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+
+<div id="navbar-main">
+    <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="menuIcon"><i class="fa fa-lg fa-list-ul"></i> Menu</span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html"><i class="glyphicon glyphicon-home"></i>&nbsp; Home</a></li>
+                <li><a href="pembelajaran.html"><i class="glyphicon glyphicon-book"></i>&nbsp; Pembelajaran</a></li>
+                <li><a href="evaluasi-daftar.html"><i class="glyphicon glyphicon-list"></i>&nbsp; Latihan</a></li>
+                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-question-sign"></i>&nbsp; Bantuan<b class="caret"></b></a>			                    
+                	<ul class="dropdown-menu">
+                        <li><a href="petunjuk.html"><i class="glyphicon glyphicon-cog"></i>&nbsp; Petunjuk</a></li>
+        </div>
+    </div>
+    </div>
+</div>
+
+    <!--INFO AWAL-->
+	<div id="kbwrap" class="kbwrap02">
+		<div class="row">
+    		<br>    
+		  <h3 class="centered">Subnetting Classfull</h3>			
+			<br>
+		</div>
+	</div>
+	
+	<div class="container" id="kb02" name="kb02">
+		<br>
+		<div class="row">
+			<div class="col-md-offset-2 col-md-8">
+			<div class="panel panel-default artikel" id="tujuan">
+				<div class="panel-body">
+					<h3 class="page-header">Kompetensi Dasar</h3>
+                    <ul>
+                    	<li>Memahami protokol pengalamatan.</li>
+                        <li>Menyajikan penggunaan protokol pengalamatan.</li>
+                    </ul>				
+					<h3 class="page-header">Tujuan</h3> 
+    				<p>Setelah kegiatan pembelajaran ini peserta didik diharapkan mampu:</p>
+					<ul>
+                        <li>Menjelaskan pengertian subnetting classfull.</li>
+                        <li>Menjelaskan prinsip cara kerja dari subnetting classfull</li>
+                        <li>Menjelaskan fungsi dan kegunaan subnetting classfull</li>
+					</ul>
+                   
+                    <hr><br><p class="gambar-tengah"><a class="btn btn-warning btn-sm smoothScroll" onclick="toggle('uraianMateri');" href="#uraianMateri">Lanjut ke Materi &raquo;</a></p>
+				</div>
+			</div>
+			
+			<div class="panel panel-default artikel" id="uraianMateri" style="display:none;">
+				<div class="panel-body">
+					<h3 class="page-header">Materi</h3>
+      
+                    				
+                    <div class="kb-row-container">
+                    <figure class="gambar-kanan img-responsive">
+ <a href="assets/img/pembelajaran.png">
+ <img src="assets/img/pembelajaran.png" width="300px" class="img-responsive tengah" alt="Subnetting" title="Subnetting">
+ </a>
+ <figcaption></figcaption>
+ </figure>
+    					  						
+                           <p><strong>Subnetting</strong> adalah teknik memecah suatu jaringan besar menjadi jaringan yang lebih kecil dengan cara mengorbankan bit Host ID pada subnet mask untuk dijadikan Network ID baru.
+<br>Analoginya seperti ini jika terdapat 120 orang siswa SMA memilih jurusan IPA , akan lebih baik bila dari seluruh total siswa tersebut dibagi menjadi 4 kelas sehingga masing-masing kelas terdiri dari 30 orang siswa dari pada dijadikan satu kelas besar tanpa ada pembagian. Konsep pembagian seperti inilah yang dianut dalam subnetting
+<br><br>Suatu alasan perlunya dibentuk subnetting antara lain :
+<br>1.Menghindari lmitasi jumlah simpul dalam satu segmen
+<br>2.mereduksi trafik yang disebabkan oleh broadcast maupun benturan (collision)
+</p>
+
+                            <p><strong>Subnetting Classfull</strong> Yang dimaksud dengan IP Classfull adalah IP yang mempunyai kelas. Pengalokasian host pada jaringan dengan menggunakan sebuah subnet mask yang sama, dimana protokol ini tidak mempunyai field untuk menyimpan informasi subnet sehingga informasi-informasi subnet tidak dikirimkan. Dalam subnetting classfull ini, membagi ruang alamat IPv4 ke alamat lima kelas. Setiap kelas, dikodekan oleh tiga bit pertama dari alamat, yang didefinisikan ukuran yang berbeda atau jenis file (unicast atau multicast) dari jaringan. Classfull merupakan metode pembagian IP address berdasarkan kelas dimana IP address dibagi menjadi lima kelas yaitu :
+<br>A
+<br>B
+<br>C
+<br>D
+<br>E</p>
+							<p>kelas A,B dan C digunakan untuk jaringan unicast, D untuk jaringan multicast dan E disediakan untuk penggunaan ”masa depan”</p>
+<figure class="gambar-kanan img-responsive">
+ <a href="assets/img/materi3/sub.png">
+ <img src="assets/img/materi3/sub.png" width="300px" class="img-responsive tengah" alt="Subnetting" title="Subnetting">
+ </a>
+ <figcaption></figcaption>
+ </figure>    
+	<p>Bit yang digunakan untuk mengidentifikasi kelas adalah sebagai berikut:
+<br>A=0
+<br>B=10
+<br>C=110
+<br>D=1.110
+<br>E=1.111</p>
+							<p>Tetapi permasalahan muncul dengan adanya arsitektur ini, bahwa ukuran jaringan tersebut terlalu besar. ini mengurangi tingkat fleksibilitasnya ini menyebabkan pemborosan beberapa alamat.</p>
+                            <p>Untuk mengatasi ini, CIDR atau Routing Inter-Domain Classless diperkenalkan pada tahun 1993. Berikut alamat IP dibagi menjadi dua bagian: bagian paling penting adalah alamat jaringan yang digunakan untuk mengidentifikasi jaringan dan bagian yang paling signifikan adalah host identifier.</p>
+                            <p>Contoh : IP Kelas C mempunyai range host 0 – 255 192.168.1.0 –  192.168.1.255, Bagaimana jika komputer dikantor cuma ada 10?kalo kita menggunakan default netmask ip kelas C 255.255.255.0 maka akan ada banyak IP yang tidak digunakan karena yang kita butuhkan hanya 10 IP saja, memang tidak ada masalah dengan mengkoneksikan IP /24 itu tetapi jika akan mengatur dan mengelola pasti akan susah karena kita bingung IP mana 
+yang telah digunakan karena terlalu banyak. maka dari itu digunakan CIDR yang  biasanya  dinotasikan  dengan  ”  /  “ atau Slash. Sehingga notasi yang digunakan /28 (pelajari teknik subnetting ip</p>
+							<p>jadi :
+<br>192.168.1.0 /28 = range ip 192.168.1.0 – 192.168.1.15
+<br>ip 192.168.1.0 = Net ID
+<br>ip 192.168.1.15 = Broadcast
+<br>ip 192.168.1.1 – 192.168.1.14 adalah IP Available</p>
+    					
+    				
+                                                
+                    	
+    				</div><!-- kb-row-container-->
+    				
+			
+            		<br><hr><br><p class="gambar-tengah"><a class="btn btn-warning btn-sm smoothScroll" onclick="toggle('rangkuman');" href="#rangkuman">Lanjut ke Rangkuman &raquo;</a></p>
+    			</div>
+    		</div>
+    		
+    		<div class="panel panel-default artikel" id="rangkuman" style="display:none;">
+				<div class="panel-body">  
+					<h3 class="page-header">Rangkuman</h3>
+					<p>Classfull  adalah alamat IP yang dibagi berdasarkan dalam kelas.Ada 5 
+kelas yang berbeda dan itu adalah kelas yang memutuskan ukuran jaringan. 
+Empat  bit  pertama  dari  alamat  IP  yang  digunakan  untuk  mengidentifikasi 
+kelas. Dari lima kelas A, B, C, D dan E. kelas A, B  dan C digunakan untuk 
+jaringan  unicast,  D  untuk  jaringan  multicast  dan  E  disediakan  untuk 
+penggunaan ”masa depan”.</p>
+                    
+                    <br><hr><br><p class="gambar-tengah"><a class="btn btn-primary btn-sm smoothScroll" href="evaluasi-3.html">Lanjut ke Evaluasi &raquo;</a></p>
+                    </div>
+    			</div>
+    		</div>
+			
+			</div><!-- col-md-offset-2 col-md-8 -->
+			<a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> <br> ke atas</a>
+		</div><!-- row -->
+	</div><!-- kb02 --> 	
+  		
+	<div id="footerwrap">
+		<div class="container">
+			<p>SESUAI DENGAN KURIKULUM 2013</p>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-func.js"></script>
+	<script type="text/javascript" src="assets/js/retina.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="assets/js/smoothscroll.js"></script>
+  </body>
+</html>
